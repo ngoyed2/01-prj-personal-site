@@ -1,1 +1,179 @@
-/* Add you CSS here */
+/* Basic styles for a simple personal site.
+	 Beginner-friendly comments explain how to customize backgrounds and content.
+*/
+
+/* Page settings */
+:root {
+	--max-width: 900px;
+	--accent: #1a0335;
+}
+
+/* Ensure the whole page uses the same fallback background color */
+html {
+    height: 100%;
+	background-color: #F7F3EA;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding-bottom: 72px; /* leave space for fixed trademark footer */
+	color: #222;
+	background-color: #F7F3EA;
+	line-height: 1.5;
+}
+
+/* Section layout */
+.section {
+	min-height: 200px; /* smaller section height for closer spacing */
+	display: flex;
+	align-items: center;
+}
+
+.section-content {
+	width: 90%;
+	max-width: var(--max-width);
+	margin: 0 auto;
+	background: transparent; /* removed semi-transparent overlay */
+	padding: 14px;
+	border-radius: 0;
+}
+
+/* Profile area in header */
+.profile {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+}
+
+/* Welcome section: stack profile picture above the text and make them larger */
+.bg-welcome .profile {
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 14px;
+}
+
+.bg-welcome .profile-pic {
+	width: 280px;
+	height: 280px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 4px solid #F7F3EA;
+}
+
+.bg-welcome .welcome-text h1 {
+	font-size: 2.8rem;
+  color: #F7F3EA;
+}
+
+.bg-welcome .welcome-text p {
+	font-size: 1.05rem;
+  color: #F7F3EA;
+}
+
+.profile-pic {
+	width: 110px;
+	height: 110px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 3px solid #F7F3EA;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+h1, h2 {
+	margin: 0 0 8px 0;
+	font-family: 'Helvetica Neue', Arial, sans-serif; /* headings use Helvetica Neue */
+	font-weight: 700;
+}
+
+p { margin: 0 0 10px 0; }
+
+.bg-skills {
+  align-items: center;
+  text-align: center;
+  color: #120223;
+}
+
+.skills-list {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.skills-list li {
+	background: #0e0126;
+  border-radius: 50%;
+	border: 3px solid #fff;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+	padding: 6px 10px;
+	border-radius: 6px;
+  text-align: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+/* Simple links styling */
+a { color: var(--accent); }
+
+.bg-welcome {
+	background: url('img/bg5.jpg') center/cover no-repeat;
+}
+
+.bg-about {
+	align-items: center;
+	text-align: center;
+	color: #120223;
+}
+
+.bg-about .section-content {
+	max-width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bg-about p {
+	line-height: 1.4;
+}
+
+.bg-contact {
+  align-items: center;
+  text-align: center;
+  color: #120223;
+}
+
+/* Small screens */
+@media (max-width: 520px) {
+	.profile { flex-direction: column; text-align: center; }
+	.profile-pic { width: 100px; height: 100px; }
+	/* slightly smaller on very small screens for the welcome section */
+	.bg-welcome .profile-pic { width: 140px; height: 140px; }
+	.bg-welcome .welcome-text h1 { font-size: 1.5rem; }
+	.bg-welcome .welcome-text p { font-size: 1rem; }
+}
+
+/* End of stylesheet */
+
+/* Trademark footer at bottom (dark purple) */
+.trademark {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #170127; /* dark purple */
+	color: #fff;
+	text-align: center;
+	padding: 12px 10px;
+	box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+}
+
+.trademark .section-content {
+	background: transparent;
+	padding: 0;
+	border-radius: 0;
+}
