@@ -83,8 +83,9 @@ body {
 
 h1, h2 {
 	margin: 0 0 8px 0;
-	font-family: 'Helvetica Neue', Arial, sans-serif; /* headings use Helvetica Neue */
-	font-weight: 700;
+  font-family: "Ultra", serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 p { margin: 0 0 10px 0; }
